@@ -1,4 +1,5 @@
 
+
     let inputWidth;
     let inputHeight;
 
@@ -10,3 +11,4 @@
 
     let area = width * height;
     document.write("The area is: " + area);
+
