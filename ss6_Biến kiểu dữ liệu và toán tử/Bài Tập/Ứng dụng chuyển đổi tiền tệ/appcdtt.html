@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<p>Amount</p>
+<input type="text" name="tien" id="nhap">
+<p>From Currency</p>
+<select id="from">
+    <option value="VND">Việt Nam</option>
+    <option value="USD">Mỹ</option>
+</select>
+<p>To Currency</p>
+<select id="to">
+    <option value="VND">Việt Nam</option>
+    <option value="USD">Mỹ</option>
+</select>
+<h2 id="xuat">Kết Quả</h2>
+<button onclick="cdtt()">CONVERT</button>
+<script>
+    function cdtt() {
+        let nhap = document.getElementById('nhap').value;
+        let from = document.getElementById('from').value;
+        let to = document.getElementById('to').value;
+        let result;
+        if(from==='USD'&&to==='VND'){result=nhap*23000;}
+        else if(from==='VND'&&to==='USD'){result=nhap/23000;}
+        else {result=nhap;}
+        document.getElementById('xuat').innerText = result;
+    }
+</script>
+</body>
+</html>
