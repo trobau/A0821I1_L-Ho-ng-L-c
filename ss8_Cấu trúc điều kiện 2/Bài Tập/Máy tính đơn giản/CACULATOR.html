@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+    <link rel="stylesheet" href="myCocular.css">
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <td colspan="4"><input id="result" type="text"></td>
+        </tr>
+        <tr>
+            <td><input class="btn" type="button" value="1" onclick="result.value+=this.value"></td>
+            <td><input class="btn" type="button" value="2" onclick="result.value+=this.value"></td>
+            <td><input class="btn" type="button" value="3" onclick="result.value+=this.value"></td>
+            <td><input class="btn" type="button" value="+" onclick="result.value+=this.value"></td>
+        </tr>
+        <tr>
+            <td><input class="btn" type="button" value="4" onclick="result.value+=this.value"></td>
+            <td><input class="btn" type="button" value="5" onclick="result.value+=this.value"></td>
+            <td><input class="btn" type="button" value="6" onclick="result.value+=this.value"></td>
+            <td><input class="btn" type="button" value="-" onclick="result.value+=this.value"></td>
+        </tr>
+        <tr>
+            <td><input class="btn" type="button" value="7" onclick="result.value+=this.value"></td>
+            <td><input class="btn" type="button" value="8" onclick="result.value+=this.value"></td>
+            <td><input class="btn" type="button" value="9" onclick="result.value+=this.value"></td>
+            <td><input class="btn" type="button" value="*" onclick="result.value+=this.value"></td>
+        </tr>
+        <tr>
+            <td><input class="btn" type="button" value="C" onclick="result.value=''"></td>
+            <td><input class="btn" type="button" value="0" onclick="result.value+=this.value"></td>
+            <td><input class="btn" type="button" value="=" onclick="result.value=eval(result.value)"></td>
+            <td><input class="btn" type="button" value="/" onclick="result.value+=this.value"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

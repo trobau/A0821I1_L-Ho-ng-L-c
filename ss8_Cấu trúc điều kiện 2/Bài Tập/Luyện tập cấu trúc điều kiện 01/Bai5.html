@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</title>
+</head>
+<body>
+<script>
+    let bkt1 = parseInt(prompt('Diem bai kiem tra 1:', ''));
+    let bkt2 = parseInt(prompt('Diem bai kiem tra 2:', ''));
+    let tgk = parseInt(prompt('Diem thi giua ky:', ''));
+    let tct = parseInt(prompt('Diem thi cuoi ky:', ''));
+    let dtb = ((bkt1+bkt2)*10+tgk*35+tct*45)/100;
+    if(dtb>9.5){
+        alert('xuat xac');
+    }else if(dtb>8){
+        alert('gioi');
+    }else if(dtb>6.5){
+        alert('kha');
+    }else if(dtb>5){
+        alert('trung binh');
+    }else alert('DỐT');
+</script>
+</body>
+</html>

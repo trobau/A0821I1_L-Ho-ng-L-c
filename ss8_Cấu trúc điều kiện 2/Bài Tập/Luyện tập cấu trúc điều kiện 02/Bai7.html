@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2.</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt('nhập a', ''));
+    let b = parseInt(prompt('nhập b', ''));
+    let c = parseInt(prompt('nhập c', ''));
+    let delta = b * b - 4 * a * c;
+    if (a === 0) {
+        if (b === 0) {
+            if (c === 0) {
+                alert('Phương tình vô số nghiệm');
+            } else {
+                alert('Phương tình vô nghiệm');
+            }
+        } else {
+            let d = -c / b;
+            alert('Phương tình có nghiệm x= ' + d);
+        }
+    } else if (delta < 0) {
+        alert('Phương trình vô nghiệm');
+    } else if(delta === 0)
+    {
+        let x = -b / 2 / a;
+        alert('Phương tình có nghiệm kép' + x);
+    }
+    else
+    {
+        let x1 = (-b + Math.sqrt(delta)) / 2 / a;
+        let x2 = (-b + Math.sqrt(delta)) / 2 / a;
+        alert('phương trình có 2 nghiệm x1= ' + x1 + ' x2= ' + x2);
+    }
+</script>
+</body>
+</html>
