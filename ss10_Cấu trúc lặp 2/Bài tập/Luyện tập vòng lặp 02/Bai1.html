@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hiển thị ra 20 số trong dãy fibonacci đầu tiên</title>
+    <title> In dãy Finonaci</title>
 </head>
 <body>
+<h2></h2>
 <script>
     let n = 0;
-    let m = 20;
+    let m = prompt('nhap so luong day muon in');
     let x = 1;
     let y = 1;
     let a;
     let sout = "<h2>"+"<p>"+1+"</p>";
-    while (n<19){
+    while (n<m-1){
         a = y;
         y = x + y;
         x = a;
