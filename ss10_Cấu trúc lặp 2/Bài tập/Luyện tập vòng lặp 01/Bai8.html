@@ -5,6 +5,34 @@
     <title>Game đoán số</title>
 </head>
 <body>
+<h2>Game đoán số</h2>
+<button onclick="abc()" id="start" name="start">Bắt Đầu</button>
+<button onclick="abc()" id="replay" name="replay">Chơi Lại</button>
+<script>
+    function TaoSoNgauNhien(min, max){
+        return Math.random() * (max - min) + min;
+    }
+    function abc() {
+        let from = parseInt(prompt('Nhập khoảng muốn đoán', ''));
+        let to = parseInt(prompt('đến ',''));
+        let ran = Math.floor(TaoSoNgauNhien(from,to));
+        let n = ran;
+        alert(n);
+        let count = 0;
+        do{
+            if (count==3){
+                alert('Hết lượt chơi');
+                break;}
+            var  doang = parseInt(prompt('Nhập số bạn đoán', ''));
+            count++;
+            if(doang == ran){
+                alert('chúc mừng');
+            }else if (doang>ran){
+                alert('Lớn hơn');
+            }else {alert('Bé hơn');}
+        }while (doang != ran);
+    }
 
+</script>
 </body>
 </html>
