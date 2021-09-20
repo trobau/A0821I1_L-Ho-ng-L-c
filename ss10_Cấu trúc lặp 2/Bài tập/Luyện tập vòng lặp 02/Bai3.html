@@ -7,53 +7,52 @@
 <body>
 <script>
     let a = "<h2>";
-    for (let i = 0; i<5;i++){
-        a = a +"<p>";
-        for (let j=0;j<=i;j++){
-            a = a +"*";
+    for (let i = 0; i < 5; i++) {
+        a = a + "<p>";
+        for (let j = 0; j <= i; j++) {
+            a = a + "*";
         }
-        a = a +"</p>";
+        a = a + "</p>";
     }
     document.write(a);
 
     let b = "<h2>";
-    for (let i = 4; i>=0;i--){
-        b = b +"<p>";
-        for (let j=0;j<=i;j++){
-            b = b +"*";
+    for (let i = 4; i >= 0; i--) {
+        b = b + "<p>";
+        for (let j = 0; j <= i; j++) {
+            b = b + "*";
         }
-        b = b +"</p>";
+        b = b + "</p>";
     }
     document.write(b);
 
     let c = "<h2>";
-    for (let i = 4; i>=0;i--){
-        c = c +"<p>";
-        for (let j=0;j<=i;j++){
-            c = c +"&nbsp"+"&nbsp";
+    for (let i = 4; i >= 0; i--) {
+        c = c + "<p>";
+        for (let j = 0; j <= i; j++) {
+            c = c + "&ensp;";
         }
-        for (let k = 5-i;k>0;k--){
-            c = c +"*";
+        for (let k = 5 - i; k > 0; k--) {
+            c = c + "*";
         }
-        c = c +"</p>";
+        c = c + "</p>";
     }
     document.write(c);
 
     let d = "<h2>";
-    for (let i = 0; i<5;i++){
-        d = d +"<p>";
-        for (let j=0;j<=i;j++){
-            d = d +"&nbsp"+"&nbsp";
+    for (let i = 0; i < 5; i++) {
+        d = d + "<p>";
+        for (let j = 0; j <= i; j++) {
+            d = d + "&ensp;";
         }
-        for (let k = 5-i;k>0;k--){
-            d = d +"*";
+        for (let k = 5 - i; k > 0; k--) {
+            d = d + "*";
         }
-        d = d +"</p>";
+        d = d + "</p>";
     }
     document.write(d);
 
 </script>
-
 
 
 </body>
