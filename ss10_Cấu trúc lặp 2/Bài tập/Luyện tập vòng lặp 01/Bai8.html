@@ -7,7 +7,6 @@
 <body>
 <h2>Game đoán số</h2>
 <button onclick="abc()" id="start" name="start">Bắt Đầu</button>
-<button onclick="abc()" id="replay" name="replay">Chơi Lại</button>
 <script>
     function TaoSoNgauNhien(min, max) {
         return Math.random() * (max - min) + min;
@@ -17,8 +16,6 @@
         let from = parseInt(prompt('Nhập khoảng muốn đoán', ''));
         let to = parseInt(prompt('đến ', ''));
         let ran = Math.floor(TaoSoNgauNhien(from, to));
-        let n = ran;
-        alert(n);
         let count = 0;
         do {
             if (count == 3) {
@@ -35,6 +32,7 @@
                 alert('Bé hơn');
             }
         } while (doang != ran);
+        document.getElementById('start').innerText = 'Chơi Lại';
     }
 
 </script>
