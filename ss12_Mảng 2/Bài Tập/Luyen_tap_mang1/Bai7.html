@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)</title>
+</head>
+<body>
+<script>
+    let n = prompt('Nhap so phan tu mang');
+    let a = new Array(n);
+    for(let index = 0; index < n ; index++){
+        alert('Nhap phan tu thu '+index);
+        a[index] = parseInt(prompt(''));
+    }
+    let V = parseInt(prompt('nhap V'));
+    for (let i = 0; i < n ; i++){
+        if (V == a[i] ){
+            for (let j = i ; j < a.length-1 ; j++){
+                a[j] = a[j+1];
+            }
+            a.length --;
+        }
+    }
+    alert(a);
+</script>
+</body>
+</html>
