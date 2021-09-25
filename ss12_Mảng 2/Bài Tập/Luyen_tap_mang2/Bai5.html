@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.</title>
+</head>
+<body>
+<script>
+    function compareTo(arr1, arr2) {
+        let result = true;
+        if(arr1.length == arr2.length)
+        {
+            for (let i = 0; i < arr1.length; i++) {
+                if (arr1[i] != arr2[i])
+                    result = false;
+            }
+        }else result = false;
+
+        return result;
+    }
+    let a = [1,4,6,8];
+    let b = [1,4,6,8];
+    let c = [1,4,5,3];
+    alert(compareTo(a,b));
+    alert(compareTo(a,c));
+</script>
+</body>
+</html>
