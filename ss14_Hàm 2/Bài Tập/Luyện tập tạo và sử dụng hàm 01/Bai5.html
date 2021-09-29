@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Star</title>
+</head>
+<body>
+<script>
+    let starArr = ['Polaris','Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe','Regulus'];
+    let constellationArr = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major','Leo']
+    function check_star(star){
+        for (let i = 0;i < starArr.length; i++){
+            if(star === starArr[i])
+                return constellationArr[i];
+        }
+    }
+    let x = prompt("nhap ten ngoi sao");
+    let y = check_star(x);
+    alert(y);
+</script>
+</body>
+</html>
