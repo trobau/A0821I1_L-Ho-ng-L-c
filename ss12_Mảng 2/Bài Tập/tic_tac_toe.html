@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic tac toe</title>
+</head>
+<body>
+<h3>Caro Game Simple</h3>
+<p id="carogame" />
+<input type="button" value="Change Value" onclick="changeValue()">
+<script>
+    let b = document.getElementById("carogame");
+
+    let board = [];
+    let data = "";
+    for (let i = 0; i < 5; i++) {
+        board[i] = new Array('.', '.', '.', '.', '.');
+    }
+
+    for (let i = 0; i < 5; i++) {
+        data += "<br/>";
+        for (let j = 0; j < 5; j++) {
+            data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+        }
+    }
+
+    data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+    b.innerHTML = data;
+    let tick = true;
+    function changeValue() {
+        let positionX = prompt("X: ");
+        let positionY = prompt("Y: ");
+        data = "";
+        if(tick == true){board[positionX][positionY] = "X"; doi_dau();}
+        else {board[positionX][positionY] = "O"; doi_dau();}
+        for (let i = 0; i < 5; i++) {
+            data += "<br/>";
+            for (let j = 0; j < 5; j++) {
+                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+        data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+        b.innerHTML = "<hr/>" + data;
+        /*for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                if (board[i][j]=='X' && board[i+1][j]=='X'&&board[i+2][j]=='X'){alert('X thang');}
+                else if (board[i][j]=='X' && board[i][j+1]=='X'&&board[i][j+2]=='X'){alert('X thang');}
+                else if (board[i][j]=='X' && board[i+1][j+1]=='X'&&board[i+2][j+2]=='X'){alert('X thang');}
+                else if (board[i][j]=='X' && board[i+1][j-1]=='X'&&board[i+2][j-2]=='X'){alert('X thang');}
+                else if (board[i][j]=='O' && board[i+1][j]=='O'&&board[i+2][j]=='O){ alert('O thang');}
+                else if (board[i][j]=='O' && board[i][j+1]=='O'&&board[i][j+2]=='O'){alert('O thang');}
+                else if (board[i][j]=='O' && board[i+1][j+1]=='O'&&board[i+2][j+2]=='O'){alert('O thang');}
+                if (board[i][j]=='O' && board[i+1][j-1]=='O'&&board[i+2][j-2]=='O'){alert('O thang');}
+
+            }
+        }*/
+    }
+    function doi_dau() {
+        if(tick == true)
+            tick = false;
+        else tick = true;
+    }
+</script>
+</body>
+</html>

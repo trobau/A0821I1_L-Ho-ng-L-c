@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cho một danh sách các phân số, hãy tìm chỉ số của phân số lớn nhất (đếm từ 0)</title>
+</head>
+<body>
+<script>
+    let numerators = [5, 2, 5];
+    let denominators = [6, 3, 4];
+    function maxFraction(numerators, denominators)
+    {
+        let i = 0;
+        let maxFract = parseInt(numerators[0])/parseInt(denominators[0]);
+        for(let index = 1;index < 3; index++)
+                if (parseInt(numerators[index])/parseInt(denominators[index]) > maxFract)
+            {
+                maxFract = parseInt(numerators[index])/parseInt(denominators[index]);
+                i = index;
+            }
+        let a = "<p>"+numerators[i]+"/"+denominators[i]+" là phân số lớn nhất, có chỉ số là "+i+"</p>";
+        document.write(a);
+    }
+    maxFraction(numerators,denominators);
+</script>
+</body>
+</html>

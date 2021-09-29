@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giả sử menu của chúng ta có các loại thức uống như sau:</title>
+</head>
+<body>
+<script>
+    alert('1 (cafe), 2 (cam vắt), 3(nước ép cà rốt), 4(nước ép cà chua), 5(nước \n' +
+        'lọc), 6(nước dừa), 7(thoát gọi món)');
+    let x = 0;
+    let dongia;
+    let thanhtoan=0;
+    do {
+
+        x = parseInt(prompt("lựa chọn 1 trong số các thức uống, "));
+        switch (x) {
+            case 1: alert('10k'); dongia = 10;break;
+            case 2: alert('15k');dongia = 15;break;
+            case 3: alert('25k'); dongia = 25;break;
+            case 4: alert('25k'); dongia = 25;break;
+            case 5: alert('5k'); dongia = 5;break;
+            case 6: alert('30k'); dongia = 30;break;
+            case 7: alert('thoat nhe!');break;
+            default: alert('khong hop le');
+        }
+        if(x>0&&x<7){
+            let n = parseInt(prompt('nhap so luong'));
+            thanhtoan = thanhtoan + n*dongia;
+        }
+    }while(x!=7);
+    document.write("so tien can thanh toan la :"+thanhtoan+" 000 vnđ");
+</script>
+</body>
+</html>
