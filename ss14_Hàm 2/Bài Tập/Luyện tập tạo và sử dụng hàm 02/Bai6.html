@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả về true, ngược lại trả về false.</title>
+</head>
+<body>
+<script>
+    function nguyen_duong(x){
+        if( x>0 && typeof x == 'number' && parseInt(x) == x){
+            return true;
+        }else return false;
+    }
+    console.log(nguyen_duong(3.2));
+    console.log(nguyen_duong(5.0));
+</script>
+</body>
+</html>

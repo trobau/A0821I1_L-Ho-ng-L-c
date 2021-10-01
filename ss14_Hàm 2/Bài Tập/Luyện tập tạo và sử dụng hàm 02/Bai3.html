@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được</title>
+</head>
+<body>
+<script>
+    function factorial(x){
+        let a = 1;
+        while(x>1){
+            a = x*a;
+            x--;
+        }
+        return a;
+    }
+    let a;
+    a = factorial(5);
+    console.log(a);
+</script>
+</body>
+</html>
