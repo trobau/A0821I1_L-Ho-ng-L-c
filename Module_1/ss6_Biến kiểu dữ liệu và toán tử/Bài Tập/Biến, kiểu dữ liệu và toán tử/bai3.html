@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích hình tròn</title>
+</head>
+<body>
+<p>Nhập bán kính đường tròn</p>
+<input type="text" name="bankinh" id="r">
+<h2 id="s">ket qua</h2>
+<button onclick="sdtr()">kết quả</button>
+<script>
+    function sdtr(){
+        var PI=3.14;
+        let r = document.getElementById('r').value;
+        let s = parseInt(r)*parseInt(r)*PI;
+        document.getElementById('s').innerText=s;
+    }
+</script>
+</body>
+</html>

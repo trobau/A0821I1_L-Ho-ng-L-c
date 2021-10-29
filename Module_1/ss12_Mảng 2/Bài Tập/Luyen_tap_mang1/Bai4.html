@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.</title>
+</head>
+<body>
+<script>
+    let n = prompt('Nhap so phan tu mang');
+    let a = new Array(n);
+    for(let index = 0; index < n ; index++){
+        alert('Nhap phan tu thu '+index);
+        a[index] = parseInt(prompt(''));
+    }
+    for(let i = 0 ; i < a.length/2 ; i++){
+        let x = a[i];
+        a[i] = a[a.length-1-i];
+        a[a.length-1-i]=x;
+    }
+    document.write(a);
+</script>
+</body>
+</html>

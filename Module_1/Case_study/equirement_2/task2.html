@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình kiểm tra một ký tự trong bảng chữ cái tiếng anh là nguyên âm
+        hay phụ âm.</title>
+</head>
+<body>
+<script>
+    let x = prompt('nhap ky tu');
+    x = x.toUpperCase();
+
+    switch (x) {
+        case 'o':
+        case 'u':
+        case 'i':
+        case 'a':
+        case 'e':
+            alert('la nguyen am');
+            break;
+        default:
+            alert('la phu am');
+    }
+</script>
+</body>
+</html>

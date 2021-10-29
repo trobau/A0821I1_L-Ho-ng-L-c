@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết một chương trình nhập một số từ bàn phím và in ra màn hình bằng chữ. Ví dụ
+        1234, kết quả in ra màn hình là một hai ba bốn.</title>
+</head>
+<body>
+<script>
+    let x = prompt('moi nhap so :');
+    function inValue(x)
+    {
+        switch (x){
+            case '0': document.write('Không'+"&nbsp;"); break;
+            case '1': document.write('Một'+"&nbsp;"); break;
+            case '2': document.write('Hai'+"&nbsp;"); break;
+            case '3': document.write('Ba'+"&nbsp;"); break;
+            case '4': document.write('Tư'+"&nbsp;"); break;
+            case '5': document.write('Năm'+"&nbsp;"); break;
+            case '6': document.write('Sáu'+"&nbsp;"); break;
+            case '7': document.write('Bảy'+"&nbsp;"); break;
+            case '8': document.write('Tám'+"&nbsp;"); break;
+            case '9': document.write('Chín'+"&nbsp;"); break;
+            default: document.write('?'+"&nbsp;");
+        }
+    }
+    function inStringValue(arr)
+    {
+        for (let i = 0;i < arr.length;i++) {
+            inValue(arr[i]);
+        }
+    }
+    inStringValue(x);
+</script>
+</body>
+</html>

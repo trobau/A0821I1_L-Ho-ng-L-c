@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng mảng b là prefix sums</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt('nhap chieu dai mang'));
+    let a = new Array(n);
+    let b = new Array(n);
+    a[0] = parseInt(prompt('nhap a[0]: '));
+    b[0] = a[0];
+    for (let index =1;index < n ; index++)
+    {
+        a[index] = parseInt(prompt('nhap a['+index + ']: '));
+        b[index] = a[index]+b[index-1];
+    }
+    document.write(b);
+
+</script>
+</body>
+</html>

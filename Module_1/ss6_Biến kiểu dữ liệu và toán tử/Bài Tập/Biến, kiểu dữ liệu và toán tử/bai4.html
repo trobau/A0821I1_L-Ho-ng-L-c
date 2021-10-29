@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chu vi đường tròn</title>
+</head>
+<body>
+<p>Nhập bán kính</p>
+<input type="text" name="bk" id="r">
+<h2 id="p">Chu vi là:</h2><br>
+<button onclick="pdtr()">kết quả</button>
+<script>
+    function pdtr(){
+        var PI=3.14;
+        let r = document.getElementById('r').value;
+        let p = parseInt(r)*2*PI;
+        document.getElementById('p').innerText=p;
+    }
+</script>
+</body>
+</html>

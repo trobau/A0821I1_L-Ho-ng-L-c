@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+<script>
+    let b = parseInt(prompt('nhập b', ''));
+    let c = parseInt(prompt('nhập c', ''));
+    if (b === 0) {
+        if (c === 0) {
+            alert('Phương tình vô số nghiệm');
+        } else {
+            alert('Phương tình vô nghiệm');
+        }
+    } else {
+        let d = -c / b;
+        alert('Phương tình có nghiệm x= ' + d);
+    }
+</script>
+</body>
+</html>
