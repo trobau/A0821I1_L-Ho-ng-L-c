@@ -1,17 +1,27 @@
-package _1_introduction_to_java.exercise;
+package _2_loop_to_java.exercise;
 
 import java.util.Scanner;
 
-public class untitled {
+public class Show_20prime_first {
     public static void main(String[] args) {
         Scanner kb = new Scanner(System.in);
         System.out.println("Enter a number");
-        int number = kb.nextInt();
+        int x = kb.nextInt();
+        int y = 0;
+        while (x > 0){
+            if(isPrime(y)){
+                System.out.println(y);
+                x--;
+            }
+            y++;
+        }
+    }
+    public static boolean isPrime(int number){
+        boolean check = true;
         if (number < 2)
-            System.out.println(number + " is not a prime");
+            check = false;
         else {
             int i = 2;
-            boolean check = true;
             while (i <= Math.sqrt(number)){
                 if (number%i == 0){
                     check = false;
@@ -19,11 +29,7 @@ public class untitled {
                 }
                 i++;
             }
-            if(check)
-                System.out.println(number + " is a prime");
-            else
-                System.out.println(number + " is not a prime");
-
         }
+        return check;
     }
 }
